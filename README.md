@@ -8,7 +8,7 @@
 
 3. Each session in sessionized web logs has number of unique URLs visited stored in the second field. Refer back to 1) for format of sessionized web logs.
 
-4. Sessionized web logs have been sorted from greatest to least based on time spent; i.e. IPs with the longest sessions are the beginning of the file.  
+4. Sessionized web logs have been sorted from greatest to least based on time spent; i.e. IPs with the longest sessions will be at the beginning of the file.  
 
 ## Once data has been created, make sure you have the DeepLearning4js framework on top of Spark, then run SessionLengthPredictor.java and SessionUniqueVisits.java to train predictive models.
 
