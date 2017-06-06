@@ -1,4 +1,4 @@
-##First, make sure you have Pig and all other relevant sub-dependencies installed, then run sessionize.pig script; multiple files will be created. 
+## First, make sure you have Pig and all other relevant sub-dependencies installed, then run sessionize.pig script; multiple files will be created. 
 
 ## Processing & Analytical goals:
 
@@ -10,7 +10,7 @@
 
 4. Sessionized web logs have been sorted from greatest to least based on time spent; i.e. IPs with the longest sessions are the beginning of the file.  
 
-##Once data has been created, make sure you have the DeepLearning4js framework on top of Spark, then run SessionLengthPredictor.java and SessionUniqueVisits.java to train predictive models.
+## Once data has been created, make sure you have the DeepLearning4js framework on top of Spark, then run SessionLengthPredictor.java and SessionUniqueVisits.java to train predictive models.
 
 ## Additional questions for Machine Learning Engineer (MLE) candidates:
 1. Predicted expected load (requests/second) determined based on utilizing Poisson probability distribution as our model. We assume that these 4 statements hold true: a) Occurrences of URL requests are Bernoulli random variables. b) The time period we are analyzing can be divided into many smaller sub-periods, ie hour/minutes/seconds/milliseconds/etc. c) The probability of two or more occurrences of a URL request within some sub-period is negligible. d) The probability of an occurrence is random, amortizing to a constant value within a specified time period. Parameters for our Poisson distribution function stored in 'data/poisson_distribution_parameters'.
