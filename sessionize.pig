@@ -45,9 +45,9 @@ r_and_t = FOREACH group_by_timesorted_weblogs {
 STORE r_and_t INTO 'data/poisson_distribution_parameters';
 
 /* Data for use in Multilayer Perceptron Classifiers */
-session_ip_and_time_spent = FOREACH sessions GENERATE $0,$1;
+session_ip_and_time_spent = FOREACH sessions_group GENERATE sessions.$0,sessions.$1;
 STORE session_ip_and_time_spent INTO 'data/session_ip_and_time_spent' USING PigStorage(','); /* Data utilized by SessionLengthPredictor.java to answer Q2 for MLE Candidates */
 
-session_ip_and_unique_url_visits = FOREACH sessions GENERATE $0,$2;
+session_ip_and_unique_url_visits = FOREACH sessions_group GENERATE sessions.$0,sessions.$2;
 STORE session_ip_and_time_spent INTO 'data/session_ip_and_unique_url_visits' USING PigStorage(','); /* Data utilized by SessionUniqueVisits.java to answer Q3 for MLE Candidates */
 
