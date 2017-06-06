@@ -3,7 +3,7 @@ DEFINE ISOToUnix org.apache.pig.piggybank.evaluation.datetime.convert.ISOToUnix(
 DEFINE CSVLoader org.apache.pig.piggybank.storage.CSVLoader();
 
 /* Load data from file */
-weblogs_elb = LOAD 'data/2015_07_22_mktplace_shop_web_log_sample.log' USING PigStorage(' ') AS
+weblogs_elb = LOAD 'data/2015_07_22_mktplace_shop_web_log_sample.log.gz' USING PigStorage(' ') AS
 (timestamp:chararray, elb_name:chararray, user_ip:chararray, back_end_ip:chararray, request_processing_time:float,
 backend_processing_time:float, response_processing_time:float, elb_status_code:int, backend_status_code:int,
 received_bytes:int, sent_bytes:int, request_string:chararray, user_agent:chararray, ssl_cipher:chararray,
